@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
+    background-size: cover;
+}
 
 h1 {
     font-size: 80px;
@@ -57,9 +61,26 @@ legend > h2 {
 label {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .submit-button {
     width: 200px;
     height: 200px;
+}
+
+#start-button {
+    background-color: black;
+    color: yellow;
+    border: none;
+}
+
+legend {
+    font-size: 100px;
+}
+
+.summary > span {
+    font-size: 50px;
+    font-weight: bolder;
 }

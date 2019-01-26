@@ -157,13 +157,20 @@ function formButtonHandle() {
     event.preventDefault();
     let userChoice = $('input[name=question]:checked').val();
     let realAnswers = questionSet[currentQuestion].answer;
-    if(userChoice === realAnswers) {
+    if (userChoice === realAnswers) {
       correctNum++;
+      startCorrectGif();
     }
-    currentQuestion+=1;
-    let nextQuestion = questionSet[currentQuestion];
-    let nextQuestionHTML = quizQuestions(nextQuestion);
-    $('#question-area').html(nextQuestionHTML);
+    if (currentQuestion < questionSet.length -1){
+      currentQuestion+=1;
+      let nextQuestion = questionSet[currentQuestion];
+      let nextQuestionHTML = quizQuestions(nextQuestion);
+      $('#question-area').html(nextQuestionHTML);
+    }
+    else {
+      let endPage = resultsPage();
+      $('#question-area').html(endPage);
+    }
   });
 }
 
@@ -171,13 +178,13 @@ function resultsPage() {
 return `<section>
     <div class='summary'>
       <h1>Did You Make It?</h1>
-      <span>Your Score: ${correctNum}/10</span>
+      <span class= "final-score">Your Score: ${correctNum}/10</span>
      <button type="reset">Restart Quiz</button>
     </div>
   </section>`
 };
 
-function endPageHandle() {
+/*function endPageHandle() {
   $('#question-area').on('submit', '#question-form', function(event) {
     event.preventDefault();
     console.log(endPageHandle);
@@ -186,8 +193,31 @@ function endPageHandle() {
 
     }
   });
-}
+}*/
 
+function startCorrectGif() {
+  $('.feedback').html(correctGif);
+};
+
+function startIncorrectGif () {
+  $('.feedback').html(incorrectGif);
+};
+
+
+const correctGif =
+  `<section class="feedback">
+    <h2>Correct!</h2>
+    <img src="https://media1.tenor.com/images/233581a52dbb8339714e8308b9f5208c/tenor.gif?itemid=5998252" alt="Antonio Brown dancing"/>
+    <button>Next Question</button>
+  </section>`
+
+const incorrectGif =
+`<section class="feedback">
+  <h2>Incorrect! The correct answer is ${questionSet[currentQuestion].answer}</h2>
+  <img src="https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif" 
+  alt="Ben Roethlisberger reaction"/>
+  <button>Next Question</button>
+</section>`
 
 $(startButtonHandle);
 $(formButtonHandle);

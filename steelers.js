@@ -117,27 +117,27 @@ function quizQuestions(question) {
     <form id='question-form'>
         <fieldset>
             <legend><h2>${question.problem}</h2></legend>
-            <label>
+              <label>
                 <input type="radio" name="question" value='${question.choice1}'>
                 <span>${question.choice1}</span>
-            </label>
+              </label>
 
-            <label>
+              <label>
                 <input type="radio" name="question" value='${question.choice2}'>
                 <span>${question.choice2}</span>
-            </label>
+              </label>
 
-            <label>
+              <label>
                 <input type="radio" name="question" value='${question.choice3}'>
                 <span>${question.choice3}</span>
-            </label>
+              </label>
 
-            <label>
+              <label>
                 <input type="radio" name="question" value='${question.choice4}'>
                 <span>${question.choice4}</span>
-            </label>
+              </label>
         </fieldset>
-        <input type="submit" value="submit">
+        <input class= "submit-button" type="submit" value="submit">
     </form>
 </section>`
         };
@@ -179,7 +179,9 @@ return `<section>
 
 function endPageHandle() {
   $('#question-area').on('submit', '#question-form', function(event) {
-    if(currentQuestion == 10) {
+    event.preventDefault();
+    console.log(endPageHandle);
+    if(currentQuestion === 10) {
       $('#question-form').hide();
 
     }

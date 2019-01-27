@@ -49,6 +49,8 @@ legend > h2 {
     font-size: 20px;
     display: inline-block;
     margin-top: 200px;
+    border: black;
+    color: black;
 }
 
 .totals{
@@ -75,6 +77,7 @@ label {
     color: yellow;
     border: none;
     border-radius: 50%;
+    outline: none;
 }
 
 legend {
@@ -95,7 +98,8 @@ legend {
     border-radius: 50%;
     color: yellow;
     background-color: black;
-    border: none;
+    outline: none;
+    /*border: none;*/
     display: block;
     margin-right: auto;
     margin-left: auto;

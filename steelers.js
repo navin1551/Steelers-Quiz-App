@@ -172,31 +172,37 @@ function formButtonHandle() {
     }
     else {
       let endPage = resultsPage();
+      $('.feedback').hide();
       $('#question-area').html(endPage);
     }
   });
 }
 
 function resultsPage() {
-return `<section>
+  $('#question-area').html(
+   `<section id= "finalPage">
     <div class='summary'>
-      <h1>Did You Make It?</h1>
+      <h1>Are You Worthy?</h1>
       <span class= "final-score">Your Score: ${correctNum}/10</span>
-     <button type="reset">Restart Quiz</button>
+      <button id= "restart-button" type="reset">Restart Quiz</button>
     </div>
   </section>`
+  );
+  handleRestartButton();
 };
 
-/*function endPageHandle() {
-  $('#question-area').on('submit', '#question-form', function(event) {
-    event.preventDefault();
-    console.log(endPageHandle);
-    if(currentQuestion === 10) {
-      $('#question-form').hide();
-
-    }
+function handleRestartButton() {
+  $('#finalPage').on('click', '#restart-button', function(event) {
+    location.reload();
   });
-}*/
+}
+
+function handleNextButton() {
+  $('.feedback').on('click', '.next-button', function(event) {
+    $('#question-area').html(nextQuestionHTML);
+  })
+}
+
 
 function startCorrectGif() {
   $('.feedback').html(correctGif);
@@ -224,4 +230,5 @@ const incorrectGif =
 
 $(startButtonHandle);
 $(formButtonHandle);
-$(endPageHandle);
+$(handleRestartButton);
+$(handleNextButton);

@@ -74,13 +74,52 @@ label {
     background-color: black;
     color: yellow;
     border: none;
+    border-radius: 50%;
 }
 
 legend {
     font-size: 100px;
 }
 
+.summary {
+    display: flex;
+    flex-direction: column;
+}
+
 .summary > span {
     font-size: 50px;
     font-weight: bolder;
+}
+
+.summary > button {
+    border-radius: 50%;
+    color: yellow;
+    background-color: black;
+    border: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.brown-dance,
+.ben-reaction {
+    width: 200px;
+    height: 200px;
+}
+
+.next-button {
+    height: 100px;
+    width: 200px;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.feedback > h2 {
+    font-size: 40px;
 }

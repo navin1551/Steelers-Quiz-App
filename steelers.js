@@ -161,6 +161,9 @@ function formButtonHandle() {
       correctNum++;
       startCorrectGif();
     }
+    else{
+      startIncorrectGif();
+    }
     if (currentQuestion < questionSet.length -1){
       currentQuestion+=1;
       let nextQuestion = questionSet[currentQuestion];
@@ -207,16 +210,16 @@ function startIncorrectGif () {
 const correctGif =
   `<section class="feedback">
     <h2>Correct!</h2>
-    <img src="https://media1.tenor.com/images/233581a52dbb8339714e8308b9f5208c/tenor.gif?itemid=5998252" alt="Antonio Brown dancing"/>
-    <button>Next Question</button>
+    <img class= "brown-dance" src="https://media1.tenor.com/images/233581a52dbb8339714e8308b9f5208c/tenor.gif?itemid=5998252" alt="Antonio Brown dancing"/>
+    <button class= "next-button">Next Question</button>
   </section>`
 
 const incorrectGif =
 `<section class="feedback">
   <h2>Incorrect! The correct answer is ${questionSet[currentQuestion].answer}</h2>
-  <img src="https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif" 
+  <img class= "ben-reaction" src="https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif" 
   alt="Ben Roethlisberger reaction"/>
-  <button>Next Question</button>
+  <button class= "next-button">Next Question</button>
 </section>`
 
 $(startButtonHandle);

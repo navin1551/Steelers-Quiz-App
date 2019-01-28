@@ -51,6 +51,10 @@ legend > h2 {
     margin-top: 200px;
     border: black;
     color: black;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    bottom: 65px;
 }
 
 .totals{
@@ -69,7 +73,7 @@ label {
 
 .submit-button {
     width: 200px;
-    height: 200px;
+    height: 1000px;
 }
 
 #start-button {
@@ -106,7 +110,7 @@ legend {
     margin-top: 50px;
 }
 
-.brown-dance,
+.shazier-takeaway,
 .ben-reaction {
     width: 200px;
     height: 200px;
@@ -122,6 +126,8 @@ legend {
     flex-direction: row;
     justify-content: center;
     align-content: flex-start;
+    position: relative;
+    top: 100px;
 }
 
 .feedback > h2 {

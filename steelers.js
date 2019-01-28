@@ -139,7 +139,7 @@ function quizQuestions(question) {
         </fieldset>
         <input class= "submit-button" type="submit" value="submit">
     </form>
-</section>`
+  </section>`
         };
 
 
@@ -157,6 +157,8 @@ function formButtonHandle() {
     event.preventDefault();
     let userChoice = $('input[name=question]:checked').val();
     let realAnswers = questionSet[currentQuestion].answer;
+    $('#question-area').hide();
+    $('.feedback').show();
     if (userChoice === realAnswers) {
       correctNum++;
       startCorrectGif();
@@ -164,17 +166,17 @@ function formButtonHandle() {
     else{
       startIncorrectGif();
     }
-    if (currentQuestion < questionSet.length -1){
-      currentQuestion+=1;
-      let nextQuestion = questionSet[currentQuestion];
-      let nextQuestionHTML = quizQuestions(nextQuestion);
-      $('#question-area').html(nextQuestionHTML);
-    }
-    else {
-      let endPage = resultsPage();
-      $('.feedback').hide();
-      $('#question-area').html(endPage);
-    }
+    // if (currentQuestion < questionSet.length -1){
+    //   currentQuestion+=1;
+    //   let nextQuestion = questionSet[currentQuestion];
+    //   let nextQuestionHTML = quizQuestions(nextQuestion);
+    //   $('#question-area').html(nextQuestionHTML);
+    // }
+    // else {
+    //   let endPage = resultsPage();
+    //   $('.feedback').hide();
+    //   $('#question-area').html(endPage);
+    // }
   });
 }
 
@@ -193,40 +195,54 @@ function resultsPage() {
 
 function handleRestartButton() {
   $('#finalPage').on('click', '#restart-button', function(event) {
-    location.reload();
+    // location.reload();
+    currentQuestion = 0;
+    correctNum = 0;
+    let firstQuestion = questionSet[currentQuestion];
+    let firstQuestionHTML = quizQuestions(firstQuestion);
+    $('#question-area').html(firstQuestionHTML);
   });
 }
 
 function handleNextButton() {
   $('.feedback').on('click', '.next-button', function(event) {
-    $('#question-area').html(nextQuestionHTML);
-  })
+    $('#question-area').show();
+    $('.feedback').hide();
+    if (currentQuestion < questionSet.length -1){
+      currentQuestion+=1;
+      let nextQuestion = questionSet[currentQuestion];
+      let nextQuestionHTML = quizQuestions(nextQuestion);
+      $('#question-area').html(nextQuestionHTML);
+    }
+    else {
+      let endPage = resultsPage();
+      // $('#question-area').html(endPage);
+    }
+  });
 }
 
 
 function startCorrectGif() {
+  const correctGif =
+    `<section class="feedback">
+      <h2>Correct!</h2>
+      <img class= "shazier-takeaway" src="https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif" alt="Shazier takeaway"/>
+      <button class= "next-button">Next</button>
+    </section>`
   $('.feedback').html(correctGif);
 };
 
 function startIncorrectGif () {
+  const incorrectGif =
+    `<section class="feedback">
+      <h2>Incorrect! The correct answer is ${questionSet[currentQuestion].answer}</h2>
+      <img class= "ben-reaction" src="https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif" 
+      alt="Ben Roethlisberger reaction"/>
+      <button class= "next-button">Next</button>
+    </section>`
   $('.feedback').html(incorrectGif);
 };
 
-
-const correctGif =
-  `<section class="feedback">
-    <h2>Correct!</h2>
-    <img class= "brown-dance" src="https://media1.tenor.com/images/233581a52dbb8339714e8308b9f5208c/tenor.gif?itemid=5998252" alt="Antonio Brown dancing"/>
-    <button class= "next-button">Next Question</button>
-  </section>`
-
-const incorrectGif =
-`<section class="feedback">
-  <h2>Incorrect! The correct answer is ${questionSet[currentQuestion].answer}</h2>
-  <img class= "ben-reaction" src="https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif" 
-  alt="Ben Roethlisberger reaction"/>
-  <button class= "next-button">Next Question</button>
-</section>`
 
 $(startButtonHandle);
 $(formButtonHandle);

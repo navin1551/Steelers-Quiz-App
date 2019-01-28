@@ -32,9 +32,6 @@ fieldset {
     flex-direction: column;
 }
 
-/*.button {
-    text-align: start;
-}*/
 
 button {
     height: 100px;
@@ -83,9 +80,12 @@ label {
 
 .submit-button {
     width: 200px;
-    height: 1000px;
+    height: 200px;
     font-size: 35px;
-    margin-top: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 #start-button {
@@ -171,9 +171,10 @@ legend {
     }
     
     body {
-        background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
-        background-size: cover;
+        background-image: none;
+        background-color: gold;
         height: 100%;
+        margin-left: 0px;
     }
 
     h1 {
@@ -213,7 +214,6 @@ legend {
         border: black;
         color: black;
         width: 275px;
-        height: 300px;
         position: relative;
         bottom: 180px;
     }
@@ -238,6 +238,10 @@ legend {
         height: 35px;
         border: solid 1px black;
         margin-top: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
     .next-button {
@@ -246,7 +250,7 @@ legend {
         width: 100px;
         font-weight: bolder;
         position: relative;
-        left: 300px;
+        left: 200px;
         background-color: gray;
         border: none;
     }
@@ -256,6 +260,21 @@ legend {
         font-size: 75px;
     }
 
+    section.feedback {
+        top: unset;
+        left: unset;
+    }
+
+    .feedback {
+        display: block;
+
+    }
+
+    section.feedback.feedback1, section.feedback.feedback2 {
+        top: unset;
+        right: unset;
+        left: unset;
+    }
 
     .feedback1 {
         background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
@@ -314,8 +333,8 @@ legend {
     }
     
     body {
-        background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
-        background-size: cover;
+        background-image: none;
+        background-color: gold;
         height: 100%;
     }
 
@@ -354,8 +373,11 @@ legend {
         width: 75px;
         height: 35px;
         border: solid 1px black;
-        margin-top: 5px;
+        margin-top: 20px;
         font-size: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 20px;
     }
 
     .feedback > h2 {

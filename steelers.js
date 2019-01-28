@@ -136,8 +136,8 @@ function quizQuestions(question) {
                 <input class= "input-class" type="radio" name="question" value='${question.choice4}'>
                 <span>${question.choice4}</span>
               </label>
+              <input class= "submit-button" type="submit" value="submit">
         </fieldset>
-        <input class= "submit-button" type="submit" value="submit">
     </form>
   </section>`
         };
@@ -166,17 +166,6 @@ function formButtonHandle() {
     else{
       startIncorrectGif();
     }
-    // if (currentQuestion < questionSet.length -1){
-    //   currentQuestion+=1;
-    //   let nextQuestion = questionSet[currentQuestion];
-    //   let nextQuestionHTML = quizQuestions(nextQuestion);
-    //   $('#question-area').html(nextQuestionHTML);
-    // }
-    // else {
-    //   let endPage = resultsPage();
-    //   $('.feedback').hide();
-    //   $('#question-area').html(endPage);
-    // }
   });
 }
 
@@ -190,12 +179,11 @@ function resultsPage() {
     </div>
   </section>`
   );
-  handleRestartButton();
+  restartButtonHandle();
 };
 
-function handleRestartButton() {
+function restartButtonHandle() {
   $('#finalPage').on('click', '#restart-button', function(event) {
-    // location.reload();
     currentQuestion = 0;
     correctNum = 0;
     let firstQuestion = questionSet[currentQuestion];
@@ -204,7 +192,7 @@ function handleRestartButton() {
   });
 }
 
-function handleNextButton() {
+function nextButtonHandle() {
   $('.feedback').on('click', '.next-button', function(event) {
     $('#question-area').show();
     $('.feedback').hide();
@@ -215,8 +203,7 @@ function handleNextButton() {
       $('#question-area').html(nextQuestionHTML);
     }
     else {
-      let endPage = resultsPage();
-      // $('#question-area').html(endPage);
+      resultsPage();
     }
   });
 }
@@ -240,11 +227,11 @@ function startIncorrectGif () {
   $('.feedback').html(incorrectGif);
 };
 
-function handleButtons() {
+function buttonHandles() {
 $(startButtonHandle);
 $(formButtonHandle);
-$(handleRestartButton);
-$(handleNextButton);
+$(restartButtonHandle);
+$(nextButtonHandle);
 }
 
-handleButtons();
+buttonHandles();

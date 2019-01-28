@@ -226,7 +226,7 @@ function startCorrectGif() {
   const correctGif =
     `<section class="feedback">
       <h2>Correct!</h2>
-      <img class= "shazier-takeaway" src="https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif" alt="Shazier takeaway"/>
+      <img class= "shazier-takeaway" src="https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif" alt="Ryan Shazier running"/>
       <button class= "next-button">Next</button>
     </section>`
   $('.feedback').html(correctGif);

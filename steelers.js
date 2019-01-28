@@ -118,7 +118,7 @@ function quizQuestions(question) {
         <fieldset>
             <legend><h2>${question.problem}</h2></legend>
               <label>
-                <input class= "input-class" type="radio" name="question" value='${question.choice1}'>
+                <input class= "input-class" type="radio" name="question" checked= 'checked' value='${question.choice1}'>
                 <span>${question.choice1}</span>
               </label>
 

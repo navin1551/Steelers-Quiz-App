@@ -27,9 +27,14 @@ h1, h2 {
     justify-content: space-between;
 }
 
-.button {
-    text-align: center;
+fieldset {
+    display: flex;
+    flex-direction: column;
 }
+
+/*.button {
+    text-align: start;
+}*/
 
 button {
     height: 100px;
@@ -46,15 +51,19 @@ legend > h2 {
     text-align: center;
 }
 
+.input-class {
+    vertical-align: middle;
+}
+
 
 #question-form {
-    font-size: 17px;
+    font-size: 15px;
     display: inline-block;
-    margin-top: 200px;
+    margin-top: 100px;
     border: black;
     color: black;
     width: 600px;
-    height: 400px;
+    height: 800px;
     position: relative;
     bottom: 65px;
 }
@@ -67,16 +76,16 @@ legend > h2 {
 }
 
 label {
-    display: flex;
-    flex-direction: column;
     font-weight: bold;
     font-size: 35px;
+    margin-top: 15px;
 }
 
 .submit-button {
     width: 200px;
     height: 1000px;
     font-size: 35px;
+    margin-top: 5px;
 }
 
 #start-button {
@@ -85,6 +94,7 @@ label {
     border: none;
     border-radius: 50%;
     outline: none;
+    opacity: 0.7;
 }
 
 legend {
@@ -111,6 +121,7 @@ legend {
     margin-right: auto;
     margin-left: auto;
     margin-top: 50px;
+    opacity: 0.7;
 }
 
 .next-button {
@@ -179,7 +190,6 @@ legend {
         border: none;
         border-radius: 50%;
         outline: none;
-        margin-top: 5px;
     }
 
     button {
@@ -198,26 +208,29 @@ legend {
     }
 
     #question-form {
-        font-size: 15px;
         display: inline-block;
         margin-top: 200px;
         border: black;
         color: black;
         width: 275px;
-        height: 200px;
+        height: 300px;
         position: relative;
         bottom: 180px;
     }
 
+    fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
     legend > h2 {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     label {
-        display: flex;
-        flex-direction: column;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 35px;
+        margin-top: 15px;
     }
 
     .submit-button {
@@ -225,11 +238,10 @@ legend {
         height: 35px;
         border: solid 1px black;
         margin-top: 5px;
-        font-size: 20px;
     }
 
     .next-button {
-        font-size: 75px;
+        font-size: 35px;
         height: 75px;
         width: 100px;
         font-weight: bolder;
@@ -322,7 +334,8 @@ legend {
         border-radius: 50%;
         outline: none;
         position: relative;
-        top: 20px;
+        top: 150px;
+        opacity: 0.7;
     }
 
     #question-form {
@@ -372,5 +385,8 @@ legend {
         right: 7000px;
     }
     
+    .summary > button {
+        opacity: 0.7;
+    }
 }
 

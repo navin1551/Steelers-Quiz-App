@@ -5,6 +5,7 @@
 body {
     background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
     background-size: cover;
+    height: 100%;
 }
 
 h1 {
@@ -37,8 +38,9 @@ button {
 }
 
 legend > h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
+
 
 #question-area {
     text-align: center;
@@ -46,7 +48,7 @@ legend > h2 {
 
 
 #question-form {
-    font-size: 20px;
+    font-size: 17px;
     display: inline-block;
     margin-top: 200px;
     border: black;
@@ -68,12 +70,13 @@ label {
     display: flex;
     flex-direction: column;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .submit-button {
     width: 200px;
     height: 1000px;
+    font-size: 35px;
 }
 
 #start-button {
@@ -110,26 +113,264 @@ legend {
     margin-top: 50px;
 }
 
-.shazier-takeaway,
-.ben-reaction {
-    width: 200px;
-    height: 200px;
-}
-
 .next-button {
-    height: 100px;
-    width: 200px;
+    height: 25px;
+    width: 100px;
+    font-weight: bolder;
+    position: relative;
+    left: 150px;
+    background-color: gray;
+    border: none;
 }
 
 .feedback {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-content: flex-start;
     position: relative;
-    top: 100px;
+    left: 250px;
+    top: 75px;
 }
 
 .feedback > h2 {
     font-size: 40px;
 }
+
+.feedback1 {
+    background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    color: yellow;
+}
+
+.feedback2 {
+    background-image: url('https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    color: yellow;
+}
+
+@media screen and (max-width: 425px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
+        background-size: cover;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 5px;
+    }
+
+    #start-button {
+        background-color: black;
+        color: yellow;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        margin-top: 5px;
+    }
+
+    button {
+        height: 40px;
+        width: 180px;
+        font-size: 10px;
+        position: relative;
+        top: 50px;
+    }
+
+    .totals{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        font-size: 25px;
+    }
+
+    #question-form {
+        font-size: 15px;
+        display: inline-block;
+        margin-top: 200px;
+        border: black;
+        color: black;
+        width: 275px;
+        height: 200px;
+        position: relative;
+        bottom: 180px;
+    }
+
+    legend > h2 {
+        font-size: 20px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .submit-button {
+        width: 75px;
+        height: 35px;
+        border: solid 1px black;
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .next-button {
+        font-size: 75px;
+        height: 75px;
+        width: 100px;
+        font-weight: bolder;
+        position: relative;
+        left: 300px;
+        background-color: gray;
+        border: none;
+    }
+
+
+    .feedback > h2 {
+        font-size: 75px;
+    }
+
+
+    .feedback1 {
+        background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 750px;
+        height: 750px;
+        color: yellow;
+        position: relative;
+        right: 7000px;
+    }
+    
+    .feedback2 {
+        background-image: url('https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 750px;
+        height: 750px;
+        color: yellow;
+        position: relative;
+        right: 7000px;
+    }
+
+    .summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .summary > span {
+        font-size: 25px;
+        font-weight: bolder;
+        position: relative;
+        top: 15px;
+        margin-top: 0%;
+    }
+    
+    .summary > button {
+        border-radius: 50%;
+        color: yellow;
+        background-color: black;
+        outline: none;
+        /*border: none;*/
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        position: relative;
+        bottom: 350px;
+        margin-top: 0%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
+        background-size: cover;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    #start-button {
+        background-color: black;
+        color: yellow;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        position: relative;
+        top: 20px;
+    }
+
+    #question-form {
+        font-size: 15px;
+        display: inline-block;
+        margin-top: 200px;
+        border: black;
+        color: black;
+        width: 500px;
+        height: 300px;
+        position: relative;
+        bottom: 175px;
+    }
+
+    .submit-button {
+        width: 75px;
+        height: 35px;
+        border: solid 1px black;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .feedback > h2 {
+        font-size: 50px;
+    }
+
+
+    .feedback1 {
+        background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 450px;
+        height: 450px;
+        color: yellow;
+        position: relative;
+        right: 7000px;
+    }
+    
+    .feedback2 {
+        background-image: url('https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 500px;
+        height: 500px;
+        color: yellow;
+        position: relative;
+        right: 7000px;
+    }
+    
+}
+

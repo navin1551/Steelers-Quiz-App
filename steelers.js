@@ -118,22 +118,22 @@ function quizQuestions(question) {
         <fieldset>
             <legend><h2>${question.problem}</h2></legend>
               <label>
-                <input type="radio" name="question" value='${question.choice1}'>
+                <input class= "input-class" type="radio" name="question" value='${question.choice1}'>
                 <span>${question.choice1}</span>
               </label>
 
               <label>
-                <input type="radio" name="question" value='${question.choice2}'>
+                <input class= "input-class" type="radio" name="question" value='${question.choice2}'>
                 <span>${question.choice2}</span>
               </label>
 
               <label>
-                <input type="radio" name="question" value='${question.choice3}'>
+                <input class= "input-class" type="radio" name="question" value='${question.choice3}'>
                 <span>${question.choice3}</span>
               </label>
 
               <label>
-                <input type="radio" name="question" value='${question.choice4}'>
+                <input class= "input-class" type="radio" name="question" value='${question.choice4}'>
                 <span>${question.choice4}</span>
               </label>
         </fieldset>
@@ -224,9 +224,8 @@ function handleNextButton() {
 
 function startCorrectGif() {
   const correctGif =
-    `<section class="feedback">
+    `<section class="feedback feedback1">
       <h2>Correct!</h2>
-      <img class= "shazier-takeaway" src="https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif" alt="Ryan Shazier running"/>
       <button class= "next-button">Next</button>
     </section>`
   $('.feedback').html(correctGif);
@@ -234,17 +233,18 @@ function startCorrectGif() {
 
 function startIncorrectGif () {
   const incorrectGif =
-    `<section class="feedback">
-      <h2>Incorrect! The correct answer is ${questionSet[currentQuestion].answer}</h2>
-      <img class= "ben-reaction" src="https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif" 
-      alt="Ben Roethlisberger reaction"/>
+    `<section class="feedback feedback2">
+      <h2>Wrong! The correct answer is: ${questionSet[currentQuestion].answer}</h2>
       <button class= "next-button">Next</button>
     </section>`
   $('.feedback').html(incorrectGif);
 };
 
-
+function handleButtons() {
 $(startButtonHandle);
 $(formButtonHandle);
 $(handleRestartButton);
 $(handleNextButton);
+}
+
+handleButtons();

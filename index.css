@@ -78,9 +78,9 @@ label {
 }
 
 .submit-button {
-  width: 200px;
-  height: 200px;
-  font-size: 35px;
+  width: 100px;
+  height: 50px;
+  font-size: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   margin-right: auto;

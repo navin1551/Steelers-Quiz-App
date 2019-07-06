@@ -1,119 +1,321 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
-    background-size: cover;
-    height: 100%;
+  background-image: url(https://idigitalcitizen.files.wordpress.com/2010/04/pittsburgh-steelers-ipad-1024steel.jpg);
+  background-size: cover;
+  height: 100%;
 }
 
 h1 {
-    font-size: 80px;
+  font-size: 80px;
 }
 
 h2 {
-    font-size: 60px;
+  font-size: 60px;
 }
 
-h1, h2 {
-    text-align: center;
+h1,
+h2 {
+  text-align: center;
 }
 
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 fieldset {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-
 button {
-    height: 100px;
-    width: 250px;
-    font-size: 20px;
-    cursor: pointer;
+  height: 100px;
+  width: 250px;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-appearance: none;
 }
 
 legend > h2 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
-
 #question-area {
-    text-align: center;
+  text-align: center;
 }
 
 .input-class {
-    vertical-align: middle;
+  vertical-align: middle;
 }
-
 
 #question-form {
-    font-size: 15px;
-    display: inline-block;
-    margin-top: 100px;
-    border: black;
-    color: black;
-    width: 600px;
-    height: 800px;
-    position: relative;
-    bottom: 65px;
+  font-size: 15px;
+  display: inline-block;
+  margin-top: 100px;
+  border: black;
+  color: black;
+  width: 600px;
+  height: 800px;
+  position: relative;
+  bottom: 65px;
 }
 
-.totals{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25px;
+.totals {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 25px;
 }
 
 label {
-    font-weight: bold;
-    font-size: 35px;
-    margin-top: 15px;
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 15px;
 }
 
 .submit-button {
-    width: 200px;
-    height: 200px;
-    font-size: 35px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    cursor: pointer;
+  width: 200px;
+  height: 200px;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  -webkit-appearance: none;
 }
 
 #start-button {
+  background-color: black;
+  color: yellow;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  opacity: 0.7;
+}
+
+legend {
+  font-size: 100px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary > span {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.summary > button {
+  border-radius: 50%;
+  color: yellow;
+  background-color: black;
+  outline: none;
+  /*border: none;*/
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  opacity: 0.7;
+  -webkit-appearance: none;
+}
+
+.next-button {
+  height: 25px;
+  width: 100px;
+  font-weight: bolder;
+  position: relative;
+  left: 150px;
+  background-color: gray;
+  border: none;
+  -webkit-appearance: none;
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  left: 250px;
+  top: 75px;
+}
+
+.feedback > h2 {
+  font-size: 40px;
+}
+
+.feedback1 {
+  background-image: url("https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  color: yellow;
+}
+
+.feedback2 {
+  background-image: url("https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  color: yellow;
+}
+
+@media screen and (max-width: 425px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: none;
+    background-color: gold;
+    height: 100%;
+    margin-left: 0px;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 5px;
+  }
+
+  #start-button {
     background-color: black;
     color: yellow;
     border: none;
     border-radius: 50%;
     outline: none;
-    opacity: 0.7;
-}
+  }
 
-legend {
-    font-size: 100px;
-}
+  button {
+    height: 40px;
+    width: 180px;
+    font-size: 10px;
+    position: relative;
+    top: 50px;
+  }
 
-.summary {
+  .totals {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 25px;
+  }
+
+  #question-form {
+    display: inline-block;
+    margin-top: 200px;
+    border: black;
+    color: black;
+    width: 275px;
+    position: relative;
+    bottom: 180px;
+  }
+
+  fieldset {
     display: flex;
     flex-direction: column;
-}
+  }
 
-.summary > span {
-    font-size: 50px;
+  legend > h2 {
+    font-size: 30px;
+  }
+
+  label {
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 15px;
+  }
+
+  .submit-button {
+    width: 75px;
+    height: 35px;
+    border: solid 1px black;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .next-button {
+    font-size: 35px;
+    height: 75px;
+    width: 100px;
     font-weight: bolder;
-}
+    position: relative;
+    left: 200px;
+    background-color: gray;
+    border: none;
+  }
 
-.summary > button {
+  .feedback > h2 {
+    font-size: 75px;
+  }
+
+  section.feedback {
+    top: unset;
+    left: unset;
+  }
+
+  .feedback {
+    display: block;
+  }
+
+  section.feedback.feedback1,
+  section.feedback.feedback2 {
+    top: unset;
+    right: unset;
+    left: unset;
+  }
+
+  .feedback1 {
+    background-image: url("https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 750px;
+    height: 750px;
+    color: yellow;
+    position: relative;
+    right: 7000px;
+  }
+
+  .feedback2 {
+    background-image: url("https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 750px;
+    height: 750px;
+    color: yellow;
+    position: relative;
+    right: 7000px;
+  }
+
+  .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .summary > span {
+    font-size: 25px;
+    font-weight: bolder;
+    position: relative;
+    top: 15px;
+    margin-top: 0%;
+  }
+
+  .summary > button {
     border-radius: 50%;
     color: yellow;
     background-color: black;
@@ -122,295 +324,92 @@ legend {
     display: block;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
-    opacity: 0.7;
-}
-
-.next-button {
-    height: 25px;
-    width: 100px;
-    font-weight: bolder;
     position: relative;
-    left: 150px;
-    background-color: gray;
-    border: none;
-}
-
-.feedback {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    left: 250px;
-    top: 75px;
-}
-
-.feedback > h2 {
-    font-size: 40px;
-}
-
-.feedback1 {
-    background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 400px;
-    height: 400px;
-    color: yellow;
-}
-
-.feedback2 {
-    background-image: url('https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 400px;
-    height: 400px;
-    color: yellow;
-}
-
-@media screen and (max-width: 425px) {
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-image: none;
-        background-color: gold;
-        height: 100%;
-        margin-left: 0px;
-    }
-
-    h1 {
-        font-size: 15px;
-    }
-
-    h2 {
-        font-size: 5px;
-    }
-
-    #start-button {
-        background-color: black;
-        color: yellow;
-        border: none;
-        border-radius: 50%;
-        outline: none;
-    }
-
-    button {
-        height: 40px;
-        width: 180px;
-        font-size: 10px;
-        position: relative;
-        top: 50px;
-    }
-
-    .totals{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        font-size: 25px;
-    }
-
-    #question-form {
-        display: inline-block;
-        margin-top: 200px;
-        border: black;
-        color: black;
-        width: 275px;
-        position: relative;
-        bottom: 180px;
-    }
-
-    fieldset {
-        display: flex;
-        flex-direction: column;
-    }
-
-    legend > h2 {
-        font-size: 30px;
-    }
-
-    label {
-        font-weight: bold;
-        font-size: 35px;
-        margin-top: 15px;
-    }
-
-    .submit-button {
-        width: 75px;
-        height: 35px;
-        border: solid 1px black;
-        margin-top: 5px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .next-button {
-        font-size: 35px;
-        height: 75px;
-        width: 100px;
-        font-weight: bolder;
-        position: relative;
-        left: 200px;
-        background-color: gray;
-        border: none;
-    }
-
-
-    .feedback > h2 {
-        font-size: 75px;
-    }
-
-    section.feedback {
-        top: unset;
-        left: unset;
-    }
-
-    .feedback {
-        display: block;
-
-    }
-
-    section.feedback.feedback1, section.feedback.feedback2 {
-        top: unset;
-        right: unset;
-        left: unset;
-    }
-
-    .feedback1 {
-        background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 750px;
-        height: 750px;
-        color: yellow;
-        position: relative;
-        right: 7000px;
-    }
-    
-    .feedback2 {
-        background-image: url('https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 750px;
-        height: 750px;
-        color: yellow;
-        position: relative;
-        right: 7000px;
-    }
-
-    .summary {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    
-    .summary > span {
-        font-size: 25px;
-        font-weight: bolder;
-        position: relative;
-        top: 15px;
-        margin-top: 0%;
-    }
-    
-    .summary > button {
-        border-radius: 50%;
-        color: yellow;
-        background-color: black;
-        outline: none;
-        /*border: none;*/
-        display: block;
-        margin-right: auto;
-        margin-left: auto;
-        position: relative;
-        bottom: 350px;
-        margin-top: 0%;
-    }
+    bottom: 350px;
+    margin-top: 0%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    * {
-        box-sizing: border-box;
-    }
-    
-    body {
-        background-image: none;
-        background-color: gold;
-        height: 100%;
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    h1 {
-        font-size: 50px;
-    }
+  body {
+    background-image: none;
+    background-color: gold;
+    height: 100%;
+  }
 
-    h2 {
-        font-size: 30px;
-    }
+  h1 {
+    font-size: 50px;
+  }
 
-    #start-button {
-        background-color: black;
-        color: yellow;
-        border: none;
-        border-radius: 50%;
-        outline: none;
-        position: relative;
-        top: 150px;
-        opacity: 0.7;
-    }
+  h2 {
+    font-size: 30px;
+  }
 
-    #question-form {
-        font-size: 15px;
-        display: inline-block;
-        margin-top: 200px;
-        border: black;
-        color: black;
-        width: 500px;
-        height: 300px;
-        position: relative;
-        bottom: 175px;
-    }
+  #start-button {
+    background-color: black;
+    color: yellow;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    position: relative;
+    top: 150px;
+    opacity: 0.7;
+  }
 
-    .submit-button {
-        width: 75px;
-        height: 35px;
-        border: solid 1px black;
-        margin-top: 20px;
-        font-size: 15px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 20px;
-    }
+  #question-form {
+    font-size: 15px;
+    display: inline-block;
+    margin-top: 200px;
+    border: black;
+    color: black;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    bottom: 175px;
+  }
 
-    .feedback > h2 {
-        font-size: 50px;
-    }
+  .submit-button {
+    width: 75px;
+    height: 35px;
+    border: solid 1px black;
+    margin-top: 20px;
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+  }
 
+  .feedback > h2 {
+    font-size: 50px;
+  }
 
-    .feedback1 {
-        background-image: url('https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 450px;
-        height: 450px;
-        color: yellow;
-        position: relative;
-        right: 7000px;
-    }
-    
-    .feedback2 {
-        background-image: url('https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 500px;
-        height: 500px;
-        color: yellow;
-        position: relative;
-        right: 7000px;
-    }
-    
-    .summary > button {
-        opacity: 0.7;
-    }
+  .feedback1 {
+    background-image: url("https://media.giphy.com/media/l3q2TLz6zIBXvmoTK/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 450px;
+    height: 450px;
+    color: yellow;
+    position: relative;
+    right: 7000px;
+  }
+
+  .feedback2 {
+    background-image: url("https://3.bp.blogspot.com/-V5rlQG1qCKM/WioORvFbsnI/AAAAAAAAWk8/AzfH5VIwil0U-jZHeka-gbblVV4Cf17pgCLcBGAs/s1600/ImpressionableResponsibleFirefly.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    color: yellow;
+    position: relative;
+    right: 7000px;
+  }
+
+  .summary > button {
+    opacity: 0.7;
+  }
 }
-
